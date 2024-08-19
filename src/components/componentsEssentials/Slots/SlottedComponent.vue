@@ -4,7 +4,13 @@ import {ref, reactive, computed, shallowReactive} from 'vue'
 
 </script>
 <template>
-    <h4 class="slot-box">My slotted component</h4>
+    <div class="slot-box">
+        MySlotBox
+        <slot>
+            <!-- We can set default/fallback content within our slot in case we do not provide any content when using it -->
+            Default/fallback content
+        </slot>
+    </div>
 </template>
 
 <style scoped>

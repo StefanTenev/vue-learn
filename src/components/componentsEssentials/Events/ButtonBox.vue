@@ -1,5 +1,5 @@
 <script setup>
-import {ref, reactive, computed, shallowReactive,  } from 'vue'
+import { ref } from 'vue'
 
 //define props
 const props = defineProps({
@@ -26,7 +26,7 @@ const emitChangeSomeState = (e, parameter1) => {
 </script>
 <template >
     <div class="component">
-        <h3>Title: My Emitting component</h3>
+        <h3>{{ props.title }}</h3>
         <label>
             Give the event an argument:
             <input type="text" v-model="emitEventArgument" />
@@ -39,13 +39,8 @@ const emitChangeSomeState = (e, parameter1) => {
 
 <style scoped>
     .button-container{
-        width: 15rem;
-        height: 15rem;
         color: red;
         margin: 0 auto;
 
-    }
-    .component{
-        border: 1px solid black
     }
 </style>

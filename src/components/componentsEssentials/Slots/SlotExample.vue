@@ -6,7 +6,10 @@ import {ref, reactive, computed, shallowReactive} from 'vue'
 <template>
     <div class="slot-box">
         MySlotBox
-        <slot/>
+        <slot>
+            <!-- We can set default/fallback content within our slot in case we do not provide any content when using it -->
+            Default/fallback content
+        </slot>
     </div>
 </template>
 
